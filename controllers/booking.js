@@ -1,3 +1,5 @@
+const Booking = require("../models/booking");
+
 exports.getBooking = (req, res, next) => {
   res.status(200).json({
     name: "Reuben",
