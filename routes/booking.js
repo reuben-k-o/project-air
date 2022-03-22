@@ -7,4 +7,8 @@ router.get("/", bookingController.getBooking);
 
 router.post("/", bookingController.postBooking);
 
+router.put("/:bookingId", bookingController.updateBooking);
+
+router.delete("/:bookingId");
+
 module.exports = router;
