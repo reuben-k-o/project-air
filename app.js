@@ -10,6 +10,9 @@ app.use(bodyParser.json());
 
 app.use("/booking", bookingRoutes);
 
-mongoose.connect(MONGODB_URI, () => {
-  app.listen(8000);
-});
+mongoose
+  .connect(MONGODB_URI)
+  .then(() => {
+    app.listen(8000);
+  })
+  .catch((err) => console.log(err));
