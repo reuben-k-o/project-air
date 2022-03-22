@@ -59,3 +59,15 @@ exports.updateBooking = async (req, res, next) => {
     console.log(err);
   }
 };
+
+exports.deleteBooking = async (req, res, next) => {
+  const bookingId = req.params.bookingId;
+  try {
+    const delBooking = await Booking.findByIdAndRemove(bookingId);
+    res
+      .status(200)
+      .json({ message: "Booking deleted successfully", booking: delBooking });
+  } catch (err) {
+    console(err);
+  }
+};

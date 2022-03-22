@@ -9,6 +9,6 @@ router.post("/", bookingController.postBooking);
 
 router.put("/:bookingId", bookingController.updateBooking);
 
-router.delete("/:bookingId");
+router.delete("/:bookingId", bookingController.deleteBooking);
 
 module.exports = router;
